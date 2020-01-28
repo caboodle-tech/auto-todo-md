@@ -261,7 +261,7 @@ if ( is_cli() === true && http_response_code() === false ) {
                     if ( in_array( $this->get_extension( $child ), $this->file_types ) && ! is_dir( $file . '/' . $child ) ) {
                         $this->process( $file . '/' . $child );
                     } else {
-                        if ( is_dir( $child ) ) {
+                        if ( is_dir( $file . '/' . $child ) ) {
                             $this->recursive_process( $file . '/' . $child );
                         }
                     }
